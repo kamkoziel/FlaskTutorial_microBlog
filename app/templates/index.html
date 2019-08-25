@@ -1,0 +1,66 @@
+<html>
+
+<head>
+    <title> {{title}} - Microblog</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='stylesheets/style.css') }}">
+    <link rel="Alternative stylesheet" type="text/css"  href="style.css">
+</head>
+
+<body>
+    <div class="menuBar">
+        <h2>Koło Łowieckie</h2>
+        <h1>WILK Husów</h1>
+        
+    </div>
+    <div class="menuButtonsBar">
+        <ul>
+            <li><a href="#"> Aktualności </a></li>
+            <li><a href="#"> Galeria </a></li>                
+            <li><a href="#"> Do pobrania </a></li>
+            <li><a href="#"> O nas </a></li>
+            <li><a href="#"> Kontakt </a></li>
+
+
+
+
+        </ul>
+
+    </div>
+    <div class="head">
+        <div class="head-login-bar">
+            <form method="post">
+                <input type="text" value="login"><br>
+                
+                <input type="password">
+
+            </form>
+        </div>
+
+    </div>
+    <br>
+    <h1> Hello!</h1>
+    <h2>You're logged as {{user.username}}</h2>
+
+    <div class="article">
+        <div class="article-head"> Aritcle title
+            <div class="article-date">2.10.2010</div><br>
+            <div class="article-autor">Autor</div>
+        </div>
+
+        <span>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ut lectus porta, eleifend lacus blandit, convallis enim. Vivamus porta nisl vel justo mollis volutpat. Nulla non bibendum lacus. Etiam rutrum mi quis metus luctus vulputate. Sed pharetra commodo nulla at tempus. Curabitur suscipit felis eget nisi laoreet rhoncus. Aliquam felis est, lacinia quis nibh sit amet, ultricies feugiat ligula. Vivamus consequat dui at ipsum pretium convallis. Phasellus rutrum ut ante sit amet tristique. Morbi sodales, diam vitae tempor dictum, orci velit sollicitudin est, sed sagittis massa purus eu elit.</p>
+
+            <p>Morbi placerat commodo nibh a tincidunt. Maecenas a luctus massa. Quisque id metus odio. Etiam ac metus porttitor, tincidunt dolor non, fermentum sapien. Morbi eu ultricies mauris, eu blandit nulla. Curabitur viverra consectetur enim et efficitur. Pellentesque pharetra nibh nec vehicula imperdiet. Donec vulputate, nulla ac congue lobortis, turpis massa varius nunc, in rhoncus turpis enim at lectus. Cras pellentesque dui quis est fringilla, vel sagittis magna blandit. In hac habitasse platea dictumst. Phasellus cursus congue lectus, vel auctor ipsum. Duis bibendum lacinia sem, sed lobortis risus vehicula semper. Proin eu purus hendrerit quam pellentesque laoreet. Etiam et nisl felis. Vivamus ultrices sodales tincidunt. Nunc faucibus posuere pharetra.</p>
+
+            <p>Vestibulum id feugiat tortor, vitae rhoncus massa. Mauris justo lectus, lobortis sit amet sem vel, venenatis auctor ligula. Phasellus tincidunt tincidunt accumsan. Suspendisse lacinia, neque blandit pulvinar dapibus, dui neque rutrum lorem, vitae egestas sem augue ac tortor. Etiam malesuada consequat mauris et semper. Fusce pellentesque sed lacus ut pretium. Curabitur quis sem at dui imperdiet sagittis sed non nunc. Nunc quam sapien, varius a ultricies vitae, pretium at orci. Nunc ultrices consequat lectus, eleifend eleifend mi. Nam nulla lacus, viverra a tincidunt suscipit, posuere ut erat. Morbi auctor mauris arcu, id imperdiet leo fermentum id. </p>
+        </span>
+    </div>
+
+    </div>
+
+    <div class="footer">
+        <p>© CopyRight Ropusch</p>
+    </div>
+</body>
+
+</html>
