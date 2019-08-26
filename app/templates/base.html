@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="title" content="Wilk Husów">
+    <title>WilkHusów</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='stylesheets/bootstrap/css/bootstrap.min.css')}}">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cookie">
+    <link rel="stylesheet" href="{{ url_for('static', filename='stylesheets/Customizable-Background--Overlay.css')}}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='stylesheets/Footer-Dark.css')}}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='stylesheets/Good-login-dropdown-menu.css')}}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='stylesheets/Good-login-dropdown-menu.css')}}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='stylesheets/Navigation-Clean.css')}}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='stylesheets/Navigation-with-Button.css')}}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='stylesheets/styles.css')}}">
+</head>
+
+<body style="background-color:rgb(229,234,228);">
+<nav class="navbar navbar-dark navbar-expand-md sticky-top bg-dark">
+        <div class="container-fluid"><a class="navbar-brand" href="#">WILK Husów</a><button class="navbar-toggler" data-toggle="collapse" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse"
+                id="navcol-1">
+                <ul class="nav navbar-nav">
+                    <li class="nav-item" role="presentation"><a class="nav-link active" href="#">Aktualności</a></li>
+                    <li class="nav-item" role="presentation"><a class="nav-link" href="#">Galeria</a></li>
+                    <li class="dropdown"><a class="dropdown-toggle nav-link text-monospace dropdown-toggle" data-toggle="dropdown" aria-expanded="false" href="#">O nas</a>
+                        <div class="dropdown-menu" role="menu"><a class="dropdown-item" role="presentation" href="#">Zarząd</a><a class="dropdown-item" role="presentation" href="#">Członkowie</a><a class="dropdown-item" role="presentation" href="#">Historia</a></div>
+                    </li>
+                    <li class="nav-item" role="presentation"><a class="nav-link text-monospace" href="#">Do Pobrania</a></li>
+                </ul><span class="ml-auto navbar-text actions"> <a class="btn btn-dark action-button" role="button" href="#" style="margin:0 3px 0 0;">Zaloguj</a><a class="btn btn-secondary action-button" role="button" href="#">Zarejestruj się</a></span></div>
+        </div>
+    </nav>
+
+{% block content %}  {% endblock %}
+
+<script src="{{ url_for( 'static' , filename='assets/js/jquery.min.js' )}}"></script>
+<script src="{{ url_for( 'static' , filename='assets/bootstrap/js/bootstrap.min.js' )}}"></script>
+</body>
+</html>
