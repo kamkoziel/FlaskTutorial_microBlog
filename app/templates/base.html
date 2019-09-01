@@ -19,7 +19,7 @@
 
 <body style="background-color:rgb(229,234,228);">
 <nav class="navbar navbar-dark navbar-expand-md sticky-top bg-dark">
-        <div class="container-fluid"><a class="navbar-brand" href="#">WILK Husów</a><button class="navbar-toggler" data-toggle="collapse" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+        <div class="container-fluid"><a class="navbar-brand" href="{{ url_for('index') }}">WILK Husów</a><button class="navbar-toggler" data-toggle="collapse" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
             <div class="collapse navbar-collapse"
                 id="navcol-1">
                 <ul class="nav navbar-nav">
@@ -29,9 +29,23 @@
                         <div class="dropdown-menu" role="menu"><a class="dropdown-item" role="presentation" href="#">Zarząd</a><a class="dropdown-item" role="presentation" href="#">Członkowie</a><a class="dropdown-item" role="presentation" href="#">Historia</a></div>
                     </li>
                     <li class="nav-item" role="presentation"><a class="nav-link text-monospace" href="#">Do Pobrania</a></li>
-                </ul><span class="ml-auto navbar-text actions"> <a class="btn btn-dark action-button" role="button" href="#" style="margin:0 3px 0 0;">Zaloguj</a><a class="btn btn-secondary action-button" role="button" href="#">Zarejestruj się</a></span></div>
+                </ul><span class="ml-auto navbar-text actions"> <a class="btn btn-dark action-button" role="button" href="{{ url_for('login') }}" style="margin:0 3px 0 0;">Zaloguj</a><a class="btn btn-secondary action-button" role="button" href="#">Zarejestruj się</a></span></div>
         </div>
-    </nav>
+</nav>
+
+{% with messages = get_flashed_messages() %}
+{% if messages %}
+<ol class = "breadcrumb" style="margin:0px;">
+    {%for message in messages %}
+    <li class="breadcrumb-item">
+        <a>
+            <span>{{ message }}</span>
+        </a>
+    </li>
+    {% endfor %}
+</ol>
+{% endif %}
+{% endwith %}
 
 {% block content %}  {% endblock %}
 
