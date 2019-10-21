@@ -29,7 +29,12 @@
                         <div class="dropdown-menu" role="menu"><a class="dropdown-item" role="presentation" href="#">Zarząd</a><a class="dropdown-item" role="presentation" href="#">Członkowie</a><a class="dropdown-item" role="presentation" href="#">Historia</a></div>
                     </li>
                     <li class="nav-item" role="presentation"><a class="nav-link text-monospace" href="#">Do Pobrania</a></li>
-                </ul><span class="ml-auto navbar-text actions"> <a class="btn btn-dark action-button" role="button" href="{{ url_for('login') }}" style="margin:0 3px 0 0;">Zaloguj</a><a class="btn btn-secondary action-button" role="button" href="#">Zarejestruj się</a></span></div>
+                </ul>
+                {% if current_user.is_anonymous %}
+                <span class="ml-auto navbar-text actions"> <a class="btn btn-dark action-button" role="button" href="{{ url_for('login') }}" style="margin:0 3px 0 0;">Zaloguj</a><a class="btn btn-secondary action-button" role="button" href="#">Zarejestruj się</a></span></div>
+                {% else %}
+                <span class="ml-auto navbar-text actions"> You are logged =) <a class="btn btn-secondary action-button" role="button" href="{{ url_for('logout') }}"> Wyloguj </a></span></div>
+
         </div>
 </nav>
 
