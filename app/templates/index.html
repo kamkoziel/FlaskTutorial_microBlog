@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 
 {% block content %}
-    <div style="background-image:url( {{ url_for('static', filename='images/Hunting-destination-poland-new.jpg')}} );height:500px;background-position:center;background-size:cover;background-repeat:no-repeat;margin:0px 0px 30px ;">
+    <div style="background-image: url( {{ url_for('static', filename='images/Hunting-destination-poland-new.jpg') }} ); height:500px;background-position:center;background-size:cover;background-repeat:no-repeat;margin:0px 0px 30px ;">
         <div class="d-flex justify-content-center align-items-center" style="height:inherit;min-height:initial;width:100%;position:absolute;left:0;background-color:rgba(30,41,99,0.53);">
             <div class="d-flex align-items-center order-12" style="height:200px;">
                 <div class="container">
@@ -15,21 +15,15 @@
         <div class="row">
             <div class="col-lg-8">
                 <h2>Aktualności</h2>
-                <div class="card" style="margin:5px 0 5px 0 ;"><img class="rounded card-img-top w-100 d-block" src=" {{ url_for('static', filename='images/shutterstock_72172759.jpg')}}">
+                {% for post in posts %}
+                <div class="card" style="margin:5px 0 5px 0 ;"><img class="rounded card-img-top w-100 d-block" src=" {{ url_for('static', filename='images/image_dog.jpg')}}" alt = "image Dog" >
                     <div class="card-body">
                         <h4 class="card-title">Title</h4>
-                        <p class="card-text">Nullam id dolor id nibh ultricies vehicula ut id elit. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus.</p><button class="btn btn-primary" type="button">Button</button></div>
+                        <h6 class="card-title">{{ post.author.username }}</h6>
+                        <p class="card-text"> {{ post.body }}</p><button class="btn btn-primary" type="button">Button</button></div>
                 </div>
-                <div class="card" style="margin:5px 0 5px 0 ;"><img class="card-img-top w-100 d-block" src=" {{ url_for('static', filename='images/Hunting-destination-poland-new.jpg')}}">
-                    <div class="card-body">
-                        <h4 class="card-title">Title</h4>
-                        <p class="card-text">Nullam id dolor id nibh ultricies vehicula ut id elit. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus.</p><button class="btn btn-primary" type="button">Button</button></div>
-                </div>
-                <div class="card" style="margin:5px 0 5px 0 ;"><img class="card-img-top w-100 d-block" src=" {{ url_for('static', filename='images/aae7da136eff15e1e7097223a71c43e2.jpg')}}">
-                    <div class="card-body">
-                            <h4 class="card-title">Title</h4>
-                        <p class="card-text">Nullam id dolor id nibh ultricies vehicula ut id elit. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus.</p><button class="btn btn-primary" type="button">Button</button></div>
-                </div>
+                {% endfor %}
+
                 <nav>
                     <ul class="pagination">
                         <li class="page-item"><a class="page-link" aria-label="Previous"><span aria-hidden="true">«</span></a></li>

@@ -31,9 +31,10 @@
                     <li class="nav-item" role="presentation"><a class="nav-link text-monospace" href="#">Do Pobrania</a></li>
                 </ul>
                 {% if current_user.is_anonymous %}
-                <span class="ml-auto navbar-text actions"> <a class="btn btn-dark action-button" role="button" href="{{ url_for('login') }}" style="margin:0 3px 0 0;">Zaloguj</a><a class="btn btn-secondary action-button" role="button" href="#">Zarejestruj się</a></span></div>
+                <span class="ml-auto navbar-text actions"> <a class="btn btn-dark action-button" role="button" href="{{ url_for('login') }}" style="margin:0 3px 0 0;">Zaloguj</a><a class="btn btn-secondary action-button" role="button" href="{{ url_for('register')}}">Zarejestruj się</a></span></div>
                 {% else %}
-                <span class="ml-auto navbar-text actions"> You are logged =) <a class="btn btn-secondary action-button" role="button" href="{{ url_for('logout') }}"> Wyloguj </a></span></div>
+            <span class="ml-auto navbar-text actions"><b> Cześć  {{ current_user.username }}  </b> <a class="btn btn-secondary action-button" role="button" href="{{ url_for('logout') }}"> Wyloguj </a></span></div>
+                {% endif %}
 
         </div>
 </nav>
@@ -41,7 +42,7 @@
 {% with messages = get_flashed_messages() %}
 {% if messages %}
 <ol class = "breadcrumb" style="margin:0px;">
-    {%for message in messages %}
+    {% for message in messages %}
     <li class="breadcrumb-item">
         <a>
             <span>{{ message }}</span>
