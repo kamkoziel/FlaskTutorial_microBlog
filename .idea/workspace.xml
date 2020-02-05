@@ -2,16 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b3dace76-880f-4792-8660-e0bf7ed7b3a9" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/errors.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/templates/404.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/templates/500.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.flaskenv" beforeDir="false" afterPath="$PROJECT_DIR$/.flaskenv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/app.db" beforeDir="false" afterPath="$PROJECT_DIR$/app/app.db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/config.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/config.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/forms.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/routes.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/routes.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
